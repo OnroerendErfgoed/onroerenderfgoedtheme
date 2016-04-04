@@ -12,8 +12,8 @@ get_default_font <- function() {
 #' @export
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
 
-  ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
-  ggplot2::theme (
+  modifyList (ggplot2::theme_bw (base_size = base_size, base_family = base_family),
+        list (
           panel.grid.major.y = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
           panel.grid.major.x = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
           panel.grid.minor.y = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
@@ -21,21 +21,20 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
 
           plot.title = ggplot2::element_text(size = 15, face= "bold"),
 
-          axis.title.y = ggplot2::element_text(size= 12, face = "bold", margin = margin(0,15,0,0)),
-          axis.title.x = ggplot2::element_text(size= 12, face = "bold", margin = margin(15,0,0,0)),
+          axis.title.y = ggplot2::element_text(size= 12, face = "bold", margin = ggplot2::margin(0,15,0,0)),
+          axis.title.x = ggplot2::element_text(size= 12, face = "bold", margin = ggplot2::margin(15,0,0,0)),
           axis.text = ggplot2::element_text (size= 12),
 
           legend.position=("bottom"),
           legend.title = ggplot2::element_blank(),
           legend.background = ggplot2::element_rect (colour = "black"),
           legend.text=ggplot2::element_text(size=10),
-          legend.margin = unit (0.2, "cm"),
 
-          ggplot2::update_geom_defaults("line", list(colour='#944EA1', size=1)),
+          ggplot2::update_geom_defaults("line", list(colour="#944EA1", size=1)),
           ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha=1/2))
-          )
-
+          ))
 }
+
 
 #' Function to return a default pdf graphics device
 #'
