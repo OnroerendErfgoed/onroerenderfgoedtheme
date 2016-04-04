@@ -1,3 +1,4 @@
+library(ggplot2)
 #' Function to get default font family
 #'
 #' @return A font family name
@@ -11,10 +12,10 @@ get_default_font <- function() {
 #' FlandersArtSans, with a fallback to Helvetica.
 #' @export
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
-
-  modifyList (ggplot2::theme_bw (base_size = base_size, base_family = base_family),
-        list (
-          text = ggplot2::element_text (angle = 0),
+  ggplot2::update_geom_defaults("line", list(colour="#944EA1", size=1))
+  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha=1/2))
+  t <- ggplot2::theme_bw(base_size = base_size, base_family = base_family) %+replace%
+    ggplot2::theme(
           panel.grid.major.y = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
           panel.grid.major.x = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
           panel.grid.minor.y = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
@@ -29,11 +30,8 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
           legend.position=("bottom"),
           legend.title = ggplot2::element_blank(),
           legend.background = ggplot2::element_rect (colour = "black"),
-          legend.text=ggplot2::element_text(size=10),
-
-          ggplot2::update_geom_defaults("line", list(colour="#944EA1", size=1)),
-          ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha=1/2))
-          ))
+          legend.text=ggplot2::element_text(size=10)
+          )
 }
 
 
