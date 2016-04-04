@@ -14,6 +14,7 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
 
   modifyList (ggplot2::theme_bw (base_size = base_size, base_family = base_family),
         list (
+          text = ggplot2::element_text (angle = 0),
           panel.grid.major.y = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
           panel.grid.major.x = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
           panel.grid.minor.y = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
