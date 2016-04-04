@@ -1,0 +1,11 @@
+Package: onroerenderfgoedtheme
+Type: Package
+Title: This package makes the ggplot2 theme available.
+Version: 0.1
+Date: 2016-03-29
+Author: Korneel De Groote
+Maintainer: Who to complain to <korneel.degroote@rwo.vlaanderen.be>
+Description: This package makes the ggplot2 theme available.
+License: EUPL
+LazyData: TRUE
+RoxygenNote: 5.0.1
