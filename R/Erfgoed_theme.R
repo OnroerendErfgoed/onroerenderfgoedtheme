@@ -13,7 +13,7 @@ get_default_font <- function() {
 #' @export
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
   ggplot2::update_geom_defaults("line", list(colour="#944EA1", size=1))
-  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha=1/2))
+  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1"))
   ggplot2::update_geom_defaults("point", list(shape = 1, size = 2.5))
 
   t <- ggplot2::theme_bw(base_size = base_size, base_family = base_family) %+replace%
