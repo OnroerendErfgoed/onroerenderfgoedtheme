@@ -14,6 +14,8 @@ get_default_font <- function() {
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
   ggplot2::update_geom_defaults("line", list(colour="#944EA1", size=1))
   ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha=1/2))
+  ggplot2::update_geom_defaults("point", list(shape = 1, size = 2.5))
+
   t <- ggplot2::theme_bw(base_size = base_size, base_family = base_family) %+replace%
     ggplot2::theme(
           panel.grid.major.y = ggplot2::element_line(size= 0.6, colour = "#d9d9d9"),
@@ -21,7 +23,7 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font()) {
           panel.grid.minor.y = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
           panel.grid.minor.x = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
 
-          plot.title = ggplot2::element_text(size = 15, face= "bold", margin =  ggplot2::margin(15,0,15,0)),
+          plot.title = ggplot2::element_text(size = 15, face= "bold", margin =  ggplot2::margin(20,20,20,20)),
 
           axis.title.y = ggplot2::element_text(angle=90, size= 12, face = "bold", margin = ggplot2::margin(0,15,0,0)),
           axis.title.x = ggplot2::element_text(size= 12, face = "bold", margin = ggplot2::margin(15,0,0,0)),
