@@ -13,7 +13,7 @@ get_default_font <- function() {
 #' @export
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 2, geom_line_size=1) {
   ggplot2::update_geom_defaults("line", list(colour="#944EA1", size= geom_line_size))
-  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1"))
+  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha = 1))
   ggplot2::update_geom_defaults("point", list(shape = 1, size = geom_point_size))
 
   t <- ggplot2::theme_bw(base_size = base_size, base_family = base_family) %+replace%
@@ -52,3 +52,17 @@ oe_pdf <- function(file='output.pdf', width=9, height=7) {
 #'
 #' @export
 oe_embed_fonts <- extrafont::embed_fonts
+
+#' Function to calculate ylim for plotting density on histograms
+#'
+#' @param x A vector of data for wich a histogram with a density line is to be plotted
+#' @param decimals Number of decimal places for rounding the upper limit.
+#' @return A vector representing the limits of the y axis
+#' @export
+
+bcomma <- function(x) format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)
+
+
+
+
+
