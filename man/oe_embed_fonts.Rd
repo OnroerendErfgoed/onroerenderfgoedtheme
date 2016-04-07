@@ -6,6 +6,15 @@
 \usage{
 oe_embed_fonts(file, format, outfile = file, options = "")
 }
+\arguments{
+\item{file}{Name of input file.}
+
+\item{format}{File format. (see ?embedFonts)}
+
+\item{outfile}{Name of the output file (with fonts embedded). (Default is same as input file)}
+
+\item{options}{Other arguments passed to embedFonts.}
+}
 \description{
 Function to embed fonts (wrapper around extrafont::embed_fonts)
 }

@@ -9,6 +9,8 @@ get_default_font <- function() {
 #' @param base_size Base fontsize for theme (default = 12)
 #' @param base_family Default family used for plot. Defaults to
 #' FlandersArtSans, with a fallback to Helvetica.
+#' @param geom_point_size Base size for geom_point.
+#' @param geom_line_size Base size for geom_line.
 #' @return A ggplot2 theme
 #' @export
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 2, geom_line_size=1) {
@@ -23,16 +25,16 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom
             panel.grid.minor.y = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
             panel.grid.minor.x = ggplot2::element_line(size= 0.3, colour = "#b3b3b3", linetype = "dotted"),
 
-            plot.title = ggplot2::element_text(size = base_size + 3, face= "bold", margin = margin(20,20,20,20)),
+            plot.title = ggplot2::element_text(size = base_size + 3, face= "bold", margin = ggplot2::margin(20,20,20,20)),
 
             axis.text = ggplot2::element_text (size= base_size),
-            axis.title.y = ggplot2::element_text(size= base_size, face = "bold",angle = 90, margin = margin(1,15,1,1)),
-            axis.title.x = ggplot2::element_text(size= base_size, face = "bold", margin = margin(15,1,1,1)),
+            axis.title.y = ggplot2::element_text(size= base_size, face = "bold",angle = 90, margin = ggplot2::margin(1,15,1,1)),
+            axis.title.x = ggplot2::element_text(size= base_size, face = "bold", margin = ggplot2::margin(15,1,1,1)),
 
             legend.position=("bottom"),
             legend.title = ggplot2::element_blank(),
             legend.background = ggplot2::element_rect (colour = "black"),
-            legend.text=ggplot2::element_text(size= base_size - 2)
+            legend.text = ggplot2::element_text(size= base_size - 2)
           )
   return(ggplot2::`%+replace%`(t_bw, t_e))
 }
@@ -51,13 +53,16 @@ oe_pdf <- function(file='output.pdf', width=9, height=7) {
 
 
 #' Function to embed fonts (wrapper around extrafont::embed_fonts)
-#'
+#' @param file	Name of input file.
+#' @param format	File format. (see ?embedFonts)
+#' @param outfile Name of the output file (with fonts embedded). (Default is same as input file)
+#' @param options	Other arguments passed to embedFonts.
 #' @export
 oe_embed_fonts <- extrafont::embed_fonts
 
 
 #' wrapper to set defaults for scales::format_format 
 #'
-#' @param ... all arguments passed to format
+#' @param x Vector to be formatted.
 #' returns a vector formatted with comma as a decimal seperator
 bcomma <- function(x) scales::format_format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)

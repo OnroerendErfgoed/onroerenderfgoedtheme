@@ -7,7 +7,7 @@
 bcomma(x)
 }
 \arguments{
-\item{...}{all arguments passed to format
+\item{x}{Vector to be formatted.
 returns a vector formatted with comma as a decimal seperator}
 }
 \description{

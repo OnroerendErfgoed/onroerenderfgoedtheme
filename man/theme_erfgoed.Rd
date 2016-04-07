@@ -12,6 +12,10 @@ theme_erfgoed(base_size = 12, base_family = get_default_font(),
 
 \item{base_family}{Default family used for plot. Defaults to
 FlandersArtSans, with a fallback to Helvetica.}
+
+\item{geom_point_size}{Base size for geom_point.}
+
+\item{geom_line_size}{Base size for geom_line.}
 }
 \value{
 A ggplot2 theme

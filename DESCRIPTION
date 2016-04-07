@@ -3,14 +3,17 @@ Type: Package
 Title: a ggplot2 theme for the Flanders Heritage Agency 
 Version: 1.0.0
 Date: 2016-04-07
-Authoris@R:
-    person("Korneel", "De Groote", email = "korneel.degroote@rwo.vlaanderen.be", role = "cre")
-    person("Maarten", "Vermeyen", email = "maarten@vermeyen.xyz", role = "ctb")
+Authors@R:
+    c(
+      person("Korneel", "De Groote", email = "korneel.degroote@rwo.vlaanderen.be", role = c("cre", "aut")),
+      person("Maarten", "Vermeyen", email = "maarten@vermeyen.xyz", role = "ctb")
+      )
 URL: https://github.com/OnroerendErfgoed/onroerenderfgoedtheme
 BugReports: https://github.com/OnroerendErfgoed/onroerenderfgoedtheme/issues
 Description: This package contains a ggplot2 theme for the Flanders Heritage 
     Agency (agentschap Onroerend Erfgoed). It sets defaults for the theme,
     the colour and the font of plots.
+License: EUPL
 Imports: 
     ggplot2,
     scales,
