@@ -12,8 +12,8 @@ Description: This package contains a ggplot2 theme for the Flanders Heritage
     Agency (agentschap Onroerend Erfgoed). It sets defaults for the theme,
     the colour and the font of plots.
 Imports: 
-    ggplot2
-    scales
-    extrafonts
+    ggplot2,
+    scales,
+    extrafont
 LazyData: TRUE
 RoxygenNote: 5.0.1

@@ -34,7 +34,7 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom
             legend.background = ggplot2::element_rect (colour = "black"),
             legend.text=ggplot2::element_text(size= base_size - 2)
           )
-  return(ggplot2::`%+replace%`, t_bw, t_e))
+  return(ggplot2::`%+replace%`(t_bw, t_e))
 }
 
 

@@ -21,17 +21,17 @@ erfgoed_kleuren <- function () {
 
   colour_names <- c("OE.hoofd",
                     "OE.blauw",
-                    "OE.lichtgroen"
-                    "OE.geel"
-                    "OE.rood"
-                    "OE.lichtpaars"
-                    "OE.lichtblauw"
-                    "OE.bruin"
-                    "OE.blauwgrijs"
-                    "OE.oranje"
-                    "OE.grijsgroen"
-                    "OE.roze"
-                    "OE.donkergrijs"
+                    "OE.lichtgroen",
+                    "OE.geel",
+                    "OE.rood",
+                    "OE.lichtpaars",
+                    "OE.lichtblauw",
+                    "OE.bruin",
+                    "OE.blauwgrijs",
+                    "OE.oranje",
+                    "OE.grijsgroen",
+                    "OE.roze",
+                    "OE.donkergrijs",
                     "OE.lichtroze")
 
   names(colours) <- colour_names

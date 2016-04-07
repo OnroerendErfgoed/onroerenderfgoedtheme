@@ -2,11 +2,11 @@
 % Please edit documentation in R/Erfgoed_theme.R
 \name{oe_embed_fonts}
 \alias{oe_embed_fonts}
-\title{Function to embed fonts}
+\title{Function to embed fonts (wrapper around extrafont::embed_fonts)}
 \usage{
 oe_embed_fonts(file, format, outfile = file, options = "")
 }
 \description{
-Function to embed fonts
+Function to embed fonts (wrapper around extrafont::embed_fonts)
 }
 
