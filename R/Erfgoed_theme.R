@@ -56,6 +56,18 @@ oe_pdf <- function(file='output.pdf', width=9, height=7) {
   grDevices::pdf(file, width, height, onefile=TRUE, family=get_default_font(), colormodel='cmyk')
 }
 
+#' Function to return a default png graphics device
+#'
+#' @param file Output filename
+#' @param width Defaults to 6.3
+#' @param height Defaults to 5.9
+#' @param units defaults to inch
+#' @param res defaults to 600
+#' @return A png graphics device
+#' @export
+oe_png<- function (file= 'output.png',width = 6.3, height = 5.9, units= "in", res = 600) {
+  grDevices::png(file= file, width = width, height = height, units = units, res= res)
+}
 
 #' Function to embed fonts (wrapper around extrafont::embed_fonts)
 #' @param file	Name of input file.
@@ -71,4 +83,4 @@ oe_embed_fonts <- extrafont::embed_fonts
 #'
 #' @param x Vector to be formatted.
 #' returns a vector formatted with comma as a decimal seperator
-bcomma <- function(x) scales::format_format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)
+bcomma <- function(x) format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)
