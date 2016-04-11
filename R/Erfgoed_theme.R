@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-library(ggplot2)
-library(scales)
-=======
->>>>>>> 5c2249a8152891419678182cf87d1f2a1972c556
 #' Function to get default font family
 #'
 #' @return A font family name
