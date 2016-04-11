@@ -66,4 +66,5 @@ oe_embed_fonts <- extrafont::embed_fonts
 #'
 #' @param x Vector to be formatted.
 #' returns a vector formatted with comma as a decimal seperator
+#' @export
 bcomma <- function(x) scales::format_format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)
