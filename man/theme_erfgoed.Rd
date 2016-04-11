@@ -4,13 +4,21 @@
 \alias{theme_erfgoed}
 \title{ggplot2theme}
 \usage{
-theme_erfgoed(base_size = 12, base_family = get_default_font())
+theme_erfgoed(base_size = 12, base_family = get_default_font(),
+  geom_point_size = 2, geom_line_size = 1)
 }
 \arguments{
 \item{base_size}{Base fontsize for theme (default = 12)}
 
 \item{base_family}{Default family used for plot. Defaults to
 FlandersArtSans, with a fallback to Helvetica.}
+
+\item{geom_point_size}{Base size for geom_point.}
+
+\item{geom_line_size}{Base size for geom_line.}
+}
+\value{
+A ggplot2 theme
 }
 \description{
 ggplot2theme

@@ -1,35 +1,40 @@
-#' colorscheme
-#' @export
+#" colorscheme
+#" @return named vector of colours
+#" @export
 erfgoed_kleuren <- function () {
+ 
+  colours <- c("#944EA1",
+               "#006DDB",
+               "#32CD32",
+               "#FFFF6D",
+               "#920000",
+               "#B66DFF",
+               "#6DB6FF",
+               "#924900",
+               "#B6DBFF",
+               "#D26E25",
+               "#009292",
+               "#FF6DB6",
+               "#004949",
+               "#FFB677")
 
-  OE.hoofd      <-"#944EA1"
-  OE.blauw      <-"#006DDB"
-  OE.lichtgroen <-"#32CD32"
-  OE.geel       <-"#FFFF6D"
-  OE.rood       <-"#920000"
-  OE.lichtpaars <-"#B66DFF"
-  OE.lichtblauw <-"#6DB6FF"
-  OE.bruin      <-"#924900"
-  OE.blauwgrijs <-"#B6DBFF"
-  OE.oranje     <-"#D26E25"
-  OE.grijsgroen <-"#009292"
-  OE.roze       <-"#FF6DB6"
-  OE.donkergrijs<-"#004949"
-  OE.lichtroze  <-"#FFB677"
 
-  return( c(OE.hoofd,
-            OE.blauw,
-            OE.lichtgroen,
-            OE.geel,
-            OE.rood,
-            OE.lichtpaars,
-            OE.lichtblauw,
-            OE.bruin,
-            OE.blauwgrijs ,
-            OE.oranje,
-            OE.grijsgroen,
-            OE.roze,
-            OE.donkergrijs,
-            OE.lichtroze)
-  )
+  colour_names <- c("OE.hoofd",
+                    "OE.blauw",
+                    "OE.lichtgroen",
+                    "OE.geel",
+                    "OE.rood",
+                    "OE.lichtpaars",
+                    "OE.lichtblauw",
+                    "OE.bruin",
+                    "OE.blauwgrijs",
+                    "OE.oranje",
+                    "OE.grijsgroen",
+                    "OE.roze",
+                    "OE.donkergrijs",
+                    "OE.lichtroze")
+
+  names(colours) <- colour_names
+
+  return(colours)
 }
