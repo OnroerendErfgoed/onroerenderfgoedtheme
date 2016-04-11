@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-library(ggplot2)
-library(scales)
-=======
->>>>>>> 5c2249a8152891419678182cf87d1f2a1972c556
 #' Function to get default font family
 #'
 #' @return A font family name
@@ -79,8 +74,9 @@ oe_embed_fonts <- extrafont::embed_fonts
 
 
 
-#' wrapper to set defaults for scales::format_format 
+#' wrapper to set defaults for scales::format_format
 #'
 #' @param x Vector to be formatted.
 #' returns a vector formatted with comma as a decimal seperator
+#' @export
 bcomma <- function(x) format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)
