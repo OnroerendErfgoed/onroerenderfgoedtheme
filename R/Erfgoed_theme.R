@@ -27,7 +27,7 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom
 
             plot.title = ggplot2::element_text(size = base_size + 3, face= "bold", margin = ggplot2::margin(20,20,20,20)),
 
-            axis.text = ggplot2::element_text (size= base_size),
+            axis.text = ggplot2::element_text (size= base_size - 2),
             axis.title.y = ggplot2::element_text(size= base_size, face = "bold",angle = 90, margin = ggplot2::margin(1,15,1,1)),
             axis.title.x = ggplot2::element_text(size= base_size, face = "bold", margin = ggplot2::margin(15,1,1,1)),
 
