@@ -1,4 +1,5 @@
 library(ggplot2)
+library(scales)
 #' Function to get default font family
 #'
 #' @return A font family name
@@ -57,9 +58,10 @@ oe_embed_fonts <- extrafont::embed_fonts
 #'
 #' @param x A vector of data for wich a histogram with a density line is to be plotted
 #' @param decimals Number of decimal places for rounding the upper limit.
+#' @param 
+#' @param 
 #' @return A vector representing the limits of the y axis
 #' @export
-
 bcomma <- function(x) format(x, big.mark = ".", decimal.mark ="," , scientific = FALSE)
 
 
