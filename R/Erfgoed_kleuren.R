@@ -1,8 +1,8 @@
-#" colorscheme
-#" @return named vector of colours
-#" @export
+#' colorscheme
+#' @return named vector of colours
+#' @export
 erfgoed_kleuren <- function () {
- 
+
   colours <- c("#944EA1",
                "#006DDB",
                "#32CD32",
