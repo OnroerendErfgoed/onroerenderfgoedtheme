@@ -13,7 +13,7 @@ get_default_font <- function() {
 #' @param geom_line_size Base size for geom_line.
 #' @return A ggplot2 theme
 #' @export
-theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 2, geom_line_size=1) {
+theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 1, geom_line_size=1) {
   ggplot2::update_geom_defaults("line", list(colour="#944EA1", size= geom_line_size))
   ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha = 1))
   ggplot2::update_geom_defaults("point", list(shape = 1, size = geom_point_size))
@@ -28,13 +28,13 @@ theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom
             plot.title = ggplot2::element_text(size = base_size + 3, face= "bold", margin = ggplot2::margin(20,20,20,20)),
 
             axis.text = ggplot2::element_text (size= base_size - 2),
-            axis.title.y = ggplot2::element_text(size= base_size, face = "bold",angle = 90, margin = ggplot2::margin(1,15,1,1)),
-            axis.title.x = ggplot2::element_text(size= base_size, face = "bold", margin = ggplot2::margin(15,1,1,1)),
+            axis.title.y = ggplot2::element_text(size= base_size - 2, face = "bold",angle = 90, margin = ggplot2::margin(1,15,1,1)),
+            axis.title.x = ggplot2::element_text(size= base_size - 2, face = "bold", margin = ggplot2::margin(15,1,1,1)),
 
             legend.position=("bottom"),
             legend.title = ggplot2::element_blank(),
             legend.background = ggplot2::element_rect (colour = "black"),
-            legend.text = ggplot2::element_text(size= base_size - 2)
+            legend.text = ggplot2::element_text(size= base_size - 4)
           )
   return(ggplot2::`%+replace%`(t_bw, t_e))
 }
