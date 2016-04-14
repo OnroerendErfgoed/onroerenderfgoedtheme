@@ -49,5 +49,5 @@ erfgoed_palette <- function (n) {
    stop("Palette length needs to be more than zero")
  }  
 
- return(erfgoedkleuren()[1:n])
+ return(erfgoed_kleuren()[1:n])
 }
