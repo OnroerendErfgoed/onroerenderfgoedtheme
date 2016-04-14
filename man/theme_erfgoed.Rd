@@ -5,7 +5,7 @@
 \title{ggplot2theme}
 \usage{
 theme_erfgoed(base_size = 12, base_family = get_default_font(),
-  geom_point_size = 2, geom_line_size = 1)
+  geom_point_size = 1, geom_line_size = 1)
 }
 \arguments{
 \item{base_size}{Base fontsize for theme (default = 12)}

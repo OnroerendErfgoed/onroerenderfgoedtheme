@@ -38,3 +38,16 @@ erfgoed_kleuren <- function () {
 
   return(colours)
 }
+
+#' colorpalette
+#' @param n number of colours (integer)
+#' @return colour palette
+#' @export
+erfgoed_palette <- function (n) {
+
+ if (n < 0) {
+   stop("Palette length needs to be more than zero")
+ }  
+
+ return(erfgoedkleuren()[1:n])
+}
