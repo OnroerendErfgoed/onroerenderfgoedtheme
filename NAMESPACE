@@ -2,6 +2,7 @@
 
 export(bcomma)
 export(erfgoed_kleuren)
+export(erfgoed_palette)
 export(oe_embed_fonts)
 export(oe_pdf)
 export(oe_png)
