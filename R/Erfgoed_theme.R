@@ -2,7 +2,7 @@
 #'
 #' @return A font family name
 get_default_font <- function() {
-  extrafont::choose_font(c("Calibri", "FlandersArtSans","Helvetica"))
+  extrafont::choose_font(c("FlandersArtSerif","Helvetica"))
 }
 
 #' ggplot2theme
