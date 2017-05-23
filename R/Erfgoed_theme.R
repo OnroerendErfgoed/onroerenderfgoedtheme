@@ -2,18 +2,18 @@
 #'
 #' @return A font family name
 get_default_font <- function() {
-  extrafont::choose_font(c("FlandersArtSerif","Helvetica"))
+  extrafont::choose_font(c("FreeSerif","Helvetica"))
 }
 
 #' ggplot2theme
 #' @param base_size Base fontsize for theme (default = 12)
 #' @param base_family Default family used for plot. Defaults to
-#' FlandersArtSans, with a fallback to Helvetica.
+#' FreeSerif, with a fallback to Helvetica.
 #' @param geom_point_size Base size for geom_point.
 #' @param geom_line_size Base size for geom_line.
 #' @return A ggplot2 theme
 #' @export
-theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 1, geom_line_size=1) {
+theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 1, geom_line_size=0.7) {
   ggplot2::update_geom_defaults("line", list(colour="#944EA1", size= geom_line_size))
   ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha = 1))
   ggplot2::update_geom_defaults("point", list(shape = 1, size = geom_point_size))
