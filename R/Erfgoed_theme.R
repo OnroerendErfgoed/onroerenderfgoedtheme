@@ -14,8 +14,8 @@ get_default_font <- function() {
 #' @return A ggplot2 theme
 #' @export
 theme_erfgoed <- function(base_size = 12, base_family = get_default_font(), geom_point_size = 1, geom_line_size=0.7) {
-  ggplot2::update_geom_defaults("line", list(colour="#944EA1", size= geom_line_size))
-  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#944EA1", alpha = 1))
+  ggplot2::update_geom_defaults("line", list(colour="#1491BB", size= geom_line_size))
+  ggplot2::update_geom_defaults("bar", list(colour="black", fill = "#1491BB", alpha = 1))
   ggplot2::update_geom_defaults("point", list(shape = 1, size = geom_point_size))
 
   t_bw <- ggplot2::theme_bw(base_size = base_size, base_family = base_family)
